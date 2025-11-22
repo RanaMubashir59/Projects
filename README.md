@@ -1,16 +1,5 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧮 Eigenvalue Calculator User GuideThis guide explains how to use the interactive 2x2 Matrix Eigenvalue Calculator (eigen_calculator.html) and interpret the results.1. Using the CalculatorThe application is designed to solve for the eigenvalues ($\lambda$) of a standard 2x2 matrix, A:$$\mathbf{A} = 
+\begin{pmatrix} 
+a & b \\ 
+c & d 
+\end{pmatrix}$$Input StepsEnter Matrix Values: Input the four numerical values corresponding to $a$, $b$, $c$, and $d$ into the four input boxes.Calculate: Click the blue "Calculate Eigenvalues & Properties" button.View Results: The Results section will appear below with the computed properties.2. Interpreting the Core PropertiesThe calculator first finds three fundamental properties derived from the matrix $A$:PropertyFormulaSignificanceDeterminant (det)$ad - bc$If $det(\mathbf{A}) = 0$, the matrix is non-invertible and the linear transformation collapses space.Trace (Tr)$a + d$Used in the characteristic polynomial: $\lambda^2 - \text{Tr}(\mathbf{A})\lambda + \text{det}(\mathbf{A}) = 0$.Discriminant ($\Delta$)$(\text{Tr})^2 - 4 \cdot \text{det}$Determines the nature of the eigenvalues.3. Understanding the Eigenvalues ($\lambda$)The eigenvalues are the solutions to the characteristic equation, found using the quadratic formula applied to the characteristic polynomial.Solution Types (Based on Discriminant $\Delta$)Discriminant (Δ)Solution TypeResult Description$\Delta > 0$Two Distinct Real EigenvaluesThe matrix represents a stable transformation (e.g., stretching/shrinking).$\Delta = 0$One Repeated Real EigenvalueThe matrix represents a sheer or uniform transformation.$\Delta < 0$Complex Conjugate EigenvaluesThe matrix represents a rotational transformation. The system has no real directions that remain unchanged.When complex eigenvalues are present, they will be displayed in the form $x + yi$ and $x - yi$.4. Test Case ExampleTry entering the following values into the calculator to confirm a real, distinct solution:VariableValue$a$2$b$1$c$1$d$2Expected Results:Determinant: 3Trace: 4Discriminant ($\Delta$): 8Eigenvalues: $\lambda_1 = 3$, $\lambda_2 = 1$Solution Type: Two distinct real eigenvalues ($\Delta > 0$).
